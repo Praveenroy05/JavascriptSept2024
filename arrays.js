@@ -173,8 +173,86 @@ let square = array6.map(function(number){ // 1 2 3
 console.log(square)
 
 
+// 13. filter(function) - Create a new array with all the elements that passes the function that we provide as a parameter
+// Syntax : 
+/*
+
+arrayname.filter(function(currentvalue, index, array){
+// code
+})
+
+*/
+
+let array7 = [10,20,30,40,50] 
+
+// let arrayresult =[]
+// for(let i=0; i<array7.length; i++){
+//     if(array7[i] > 30){
+//         console.log(array7[i])
+//         }
+// }
+
+const filterResult = array7.filter(function(a){
+    return a > 30
+})
+console.log(filterResult)
 
 
+
+// 14 . reduce(function) - 
+// Syntax - 
+/*
+arrayname.reduce(function(accumulator, currentValue, index, array){
+// code
+}, initialvalue(optional))
+*/
+// accumulator - The acumating values from the previously retuned value in the last invocation
+
+//let array7 = [10,20,30,40,50] // 10+20+30....
+
+let sum = 0
+for(let i=0; i<array7.length; i++){
+    sum = sum+ array7[i] // sum = 0+10 // 10 +20
+}
+
+const reduceResult = array7.reduce(function(sum, element){
+    return sum + element
+})
+console.log(reduceResult)
+
+// 15. some(function) - Checks whether at least one element in the array passes the function that we provide as the parameter true or else false
+// SYntax
+/*
+arrayname.some(function(currentvalue, index, array){
+// code
+})
+*/
+
+//let array7 = [10,20,30,40,50] 
+const someresult = array7.some(function(number){
+    return number >10
+})
+console.log(someresult)
+
+// 16. every(function) - 
+/*
+arrayname.every(function(currentvalue, index, array){
+    // code
+})
+*/
+
+const everyresult = array7.every(function(number){
+    return number >10
+})
+console.log(everyresult)
+
+
+// 17. concat - It conact more than one array
+
+let one = [1,2]
+let two = [3,4]
+
+console.log(one.concat(two))
 
 
 
